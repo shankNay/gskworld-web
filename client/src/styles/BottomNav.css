@@ -1,0 +1,94 @@
+/* ================================
+   Bottom Navigation (Base)
+================================ */
+.bottom-nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 20px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.bottom-nav.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ================================
+   Buttons
+================================ */
+.bottom-nav button {
+  background: none;
+  border: none;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  padding: 10px 16px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  color: #111;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.bottom-nav button:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ================================
+   Mobile Responsiveness
+================================ */
+@media (max-width: 768px) {
+  .bottom-nav {
+    width: calc(100% - 32px);
+    max-width: 420px;
+
+    bottom: 16px;
+    padding: 12px 14px;
+    gap: 8px;
+
+    justify-content: space-between;
+  }
+
+  .bottom-nav button {
+    flex: 1;
+
+    font-size: 0.8rem;
+    padding: 10px 0;
+
+    border-radius: 16px;
+  }
+}
+
+/* ================================
+   Small Phones (extra safety)
+================================ */
+@media (max-width: 420px) {
+  .bottom-nav button {
+    font-size: 0.75rem;
+  }
+}

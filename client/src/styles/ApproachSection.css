@@ -1,0 +1,73 @@
+/* ================================
+   Approach Section
+================================ */
+.approach-section {
+  min-height: 10vh; /* Full screen presence */
+  padding: 100px 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+}
+
+/* Inner container */
+.approach-inner {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 100px;
+}
+
+/* Heading (left on desktop) */
+.approach-heading {
+  flex: 1;
+
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+
+  margin: 0;
+}
+
+/* Description (right on desktop) */
+.approach-text {
+  flex: 1;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+
+  max-width: 620px;
+}
+
+/* ================================
+   Responsive (Mobile)
+================================ */
+@media (max-width: 768px) {
+  .approach-section {
+    min-height: auto;
+    padding: 120px 24px;
+  }
+
+  .approach-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .approach-heading {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .approach-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}

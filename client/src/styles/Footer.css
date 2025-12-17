@@ -1,0 +1,96 @@
+.footer {
+  background: #0e0e0e;
+  color: #cfcfcf;
+  margin-top: 120px;
+
+  /* NEW: rounded top corners */
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+
+  /* Ensures inner content respects the rounding */
+  overflow: hidden;
+}
+
+/* --- Top highlight panel --- */
+.footer-highlight {
+  background: #141414;
+  border-radius: 24px;
+  margin: 0 32px;
+  padding: 40px 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-highlight-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.footer-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* --- Main footer content --- */
+.footer-content {
+  padding: 80px 64px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 64px;
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  color: #b5b5b5;
+}
+
+/* --- Bottom note --- */
+.footer-bottom {
+  padding: 24px 64px 40px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #b5b5b5;          /* Same as footer text */
+  text-decoration: none;  /* Remove underline */
+  display: inline-block;
+  margin-top: 6px;
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+/* Prevent browser default styles */
+.footer-link:visited,
+.footer-link:active {
+  color: #b5b5b5;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
