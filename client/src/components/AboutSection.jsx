@@ -2,12 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import aboutImage from "../assets/gsk_about_us.png";
 import "../styles/AboutSection.css";
 
-/**
- * AboutSection
- * - Centered layout
- * - Fades in when scrolled into view
- * - Animation runs only once
- */
 const AboutSection = () => {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -17,11 +11,11 @@ const AboutSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // run once
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.3, // trigger when ~30% visible
+        threshold: 0.3,
       }
     );
 

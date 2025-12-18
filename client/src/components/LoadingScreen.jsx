@@ -3,15 +3,6 @@ import { gsap } from "gsap";
 import logo from "../assets/gsklogonobg.png";
 import "../styles/LoadingScreen.css";
 
-/**
- * LoadingScreen animation flow:
- * 1. Logo appears centered
- * 2. Pulses once
- * 3. Flies upward WHILE scaling down smoothly
- * 4. Lands exactly on navbar logo
- * 5. Navbar logo fades in
- * 6. Loader fades out
- */
 const LoadingScreen = ({ onFinish }) => {
   const logoRef = useRef(null);
 
@@ -21,16 +12,13 @@ const LoadingScreen = ({ onFinish }) => {
 
     if (!loaderLogo || !navLogo) return;
 
-    // Lock transform origin so scale does not cause drift
     gsap.set(loaderLogo, {
       transformOrigin: "center center",
     });
 
-    // Measure final navbar logo position
     const navRect = navLogo.getBoundingClientRect();
     const loaderRect = loaderLogo.getBoundingClientRect();
 
-    // Calculate distance required to align centers
     const deltaX =
       navRect.left + navRect.width / 2 -
       (loaderRect.left + loaderRect.width / 2);
@@ -44,7 +32,7 @@ const LoadingScreen = ({ onFinish }) => {
     });
 
     tl
-      // Pulse (attention grab)
+
       .to(loaderLogo, {
         scale: 1.08,
         opacity: 1,
@@ -53,19 +41,14 @@ const LoadingScreen = ({ onFinish }) => {
         repeat: 1,
       })
 
-      /**
-       * Fly + resize together
-       * Scale reduces gradually during movement,
-       * preventing sudden edge overflow.
-       */
       .to(loaderLogo, {
         x: deltaX,
         y: deltaY,
-        scale: 0.3, // final size matches navbar logo
+        scale: 0.3,
         duration: 1.1,
       })
 
-      // Reveal navbar logo exactly at landing position
+
       .to(
         navLogo,
         {
@@ -75,7 +58,7 @@ const LoadingScreen = ({ onFinish }) => {
         "-=0.15"
       )
 
-      // Fade out loader overlay
+    
       .to(
         ".loading-screen",
         {

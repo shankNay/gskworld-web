@@ -1,16 +1,8 @@
 import "../styles/Footer.css";
 
-/**
- * Footer
- * - Dark themed footer inspired by reference
- * - Top highlight panel with Year Founded & Location
- * - Main footer with info columns
- * - No navigation bar (already exists globally)
- */
 const Footer = () => {
   return (
     <footer id="contact"  className="footer">
-      {/* Top highlight panel */}
       <div className="footer-highlight">
         <div className="footer-highlight-item">
           <span className="footer-label">Year Founded</span>
@@ -23,7 +15,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main footer content */}
       <div className="footer-content">
         <div className="footer-column">
           <h4>Get in touch</h4>
@@ -58,7 +49,6 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom note */}
       <div className="footer-bottom">
         {/* © {new Date().getFullYear()} Designed and Developed by Kake Technologies. */}
       </div>

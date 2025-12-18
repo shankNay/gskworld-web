@@ -5,12 +5,7 @@ import serviceImage3 from "../assets/gsk_service_3.png";
 import serviceImage4 from "../assets/gsk_service_4.png";
 import "../styles/ServicesSection.css";
 
-/**
- * ServicesSection
- * - 4 interactive service cards
- * - Scroll-triggered fade-in (runs once)
- * - Microsoft Store–style hover interaction
- */
+
 const ServicesSection = () => {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -20,7 +15,7 @@ const ServicesSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // run once
+          observer.disconnect();
         }
       },
       { threshold: 0.25 }
@@ -47,7 +42,6 @@ const ServicesSection = () => {
       </p>
 
       <div className="services-grid">
-        {/* Service 1 */}
         <div className="service-card service-card--interactive">
           <div
             className="service-card-image"
@@ -63,8 +57,6 @@ const ServicesSection = () => {
             </p>
           </div>
         </div>
-
-        {/* Service 2 */}
         <div className="service-card service-card--interactive">
           <div
             className="service-card-image"
@@ -80,8 +72,6 @@ const ServicesSection = () => {
             </p>
           </div>
         </div>
-
-        {/* Service 3 */}
         <div className="service-card service-card--interactive">
           <div
             className="service-card-image"
@@ -98,7 +88,6 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Service 4 */}
         <div className="service-card service-card--interactive">
           <div
             className="service-card-image"

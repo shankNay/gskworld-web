@@ -1,12 +1,5 @@
 import "../styles/ApproachSection.css";
 
-/**
- * ApproachSection
- * - Two-column layout
- * - Large heading on the left
- * - Supporting description on the right
- * - Content-focused, styling kept minimal
- */
 const ApproachSection = () => {
   return (
     <section id="approach" className="approach-section">
