@@ -60,7 +60,7 @@ const Footer = () => {
 
       {/* Bottom note */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Designed and Developed by Kake Technologies.
+        {/* © {new Date().getFullYear()} Designed and Developed by Kake Technologies. */}
       </div>
     </footer>
   );
