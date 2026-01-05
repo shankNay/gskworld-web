@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        {/* © {new Date().getFullYear()} Designed and Developed by Kake Technologies. */}
+        © {new Date().getFullYear()} Designed and Developed by Kayke Technologies.
       </div>
     </footer>
   );
